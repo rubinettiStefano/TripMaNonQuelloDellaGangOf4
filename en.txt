@@ -1,0 +1,6 @@
+ASKNAME=Enter customer's name:
+ASKSURNAME=Enter customer's surname:
+ASKDOB=Enter date of birth:
+ASKTRIPID=Enter trip id
+TRIPNOTFOUND=Trip not found
+NEWCUSTOMER=New Customer created

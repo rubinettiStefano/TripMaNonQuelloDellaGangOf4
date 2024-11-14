@@ -1,0 +1,6 @@
+ASKNAME=Inserisci il nome del cliente:
+ASKSURNAME=Inserisci il cognome del cliente:
+ASKDOB=Inserisci la data di nascita:
+ASKTRIPID=Inserisci l'id del viaggio
+TRIPNOTFOUND=Viaggio non trovato
+NEWCUSTOMER=Nuovo cliente creato
