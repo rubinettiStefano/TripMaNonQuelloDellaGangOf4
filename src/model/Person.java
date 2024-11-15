@@ -2,7 +2,7 @@ package model;
 
 import java.time.LocalDate;
 
-public class Person extends BaseEntity
+public abstract class Person extends BaseEntity
 {
 	String name,surname;
 	LocalDate dob;
@@ -60,4 +60,8 @@ public class Person extends BaseEntity
 		this.trip = trip;
 		trip_id = trip.id;
 	}
+
+	//metodo inutile con l'unico scopo di essere overridato
+	public abstract String presentation();
+
 }

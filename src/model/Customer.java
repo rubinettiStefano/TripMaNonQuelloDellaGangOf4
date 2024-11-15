@@ -15,4 +15,10 @@ public class Customer extends Person
 	{
 		this.language = language;
 	}
+
+	@Override
+	public String presentation()
+	{
+		return "Ciao sono un customer di nome "+name+" "+surname+" e parlo "+language;
+	}
 }

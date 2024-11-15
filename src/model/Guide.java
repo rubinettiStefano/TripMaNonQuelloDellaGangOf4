@@ -13,4 +13,10 @@ public class Guide extends Person
 	{
 		this.tariff = tariff;
 	}
+
+	@Override
+	public String presentation()
+	{
+		return "Buongiorno a tutti, sono una guida di nome "+name+" "+surname+" e prendo "+tariff+" euro a viaggio";
+	}
 }

@@ -1,6 +1,6 @@
 package model;
 
-public class BaseEntity
+public abstract class BaseEntity
 {
 	int id;
 

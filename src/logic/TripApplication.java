@@ -4,6 +4,7 @@ import enums.Language;
 import enums.Message;
 import model.Customer;
 import model.Guide;
+import model.Person;
 import model.Trip;
 
 import java.io.FileNotFoundException;
@@ -156,5 +157,10 @@ public class TripApplication
 	{
 		for(Trip t : trips)
 			System.out.println("Location: "+t.getLocation()+", net revenue: "+t.revenue()+" euro");
+	}
+
+	private static void creaPerson()
+	{
+		Person person = new Person();
 	}
 }

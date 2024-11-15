@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class ItTranslator implements Translator
+public class ItTranslator extends TranslatorAb
 {
 	private static ItTranslator instance;
 
@@ -20,6 +20,7 @@ public class ItTranslator implements Translator
 			instance = new ItTranslator();
 			try
 			{
+				instance.fileName = "it.txt";
 				instance.loadFromFile();
 			} catch (FileNotFoundException e)
 			{
@@ -30,29 +31,5 @@ public class ItTranslator implements Translator
 		return instance;
 	}
 
-	private final Map<Message,String> dictionary = new HashMap<>();
-
 	private ItTranslator(){}
-
-	@Override
-	public void loadFromFile() throws FileNotFoundException
-	{
-		Scanner sc = new Scanner(new File("it.txt"));
-
-		while (sc.hasNextLine())
-		{
-			String riga = sc.nextLine();
-			String[] splitted = riga.split("=");
-			dictionary.put(Message.valueOf(splitted[0]), splitted[1]);
-		}
-	}
-
-	@Override
-	public String translate(Message toTranslate)
-	{
-		if(!dictionary.containsKey(toTranslate))
-			throw new NoSuchElementException();
-
-		return dictionary.get(toTranslate);
-	}
 }

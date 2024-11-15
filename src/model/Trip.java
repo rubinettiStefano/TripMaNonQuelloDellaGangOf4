@@ -24,7 +24,7 @@ public class Trip extends BaseEntity
 			if(p instanceof Guide)
 			{
 				Guide g = (Guide)p;
-				res+=((Guide) p).getTariff();
+				res+=g.getTariff();
 			}
 
 		return res;
@@ -89,5 +89,27 @@ public class Trip extends BaseEntity
 	public void addPerson(Person person)
 	{
 		people.add(person);
+	}
+
+	public String ritoTribaleDiPresentazione()
+	{
+		//si mettono tutti in cerchio e si presentano
+		String res = "";
+		for (Person p : people)
+		{
+			res+=p.presentation();
+//			if(p instanceof Customer)
+//			{
+//				Customer c = (Customer)p;
+//				res+=c.presentation();
+//			}
+//
+//			if(p instanceof Guide)
+//			{
+//				Guide c = (Guide)p;
+//				res+=c.presentation();
+//			}
+		}
+		return res;
 	}
 }
